@@ -14,6 +14,7 @@ body {
 /* Navbar */
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
@@ -36,6 +37,7 @@ body {
     border-radius: 30px;
     padding: 10px;
     flex-grow: 1;
+    min-width: 200px;
 }
 
 .navbar_s2_input {
@@ -53,6 +55,9 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .navbar_s3_btn {
@@ -74,7 +79,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -114,13 +119,15 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .reco_card {
     padding: 15px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 320px;
+    flex-grow: 1;
     background: #fff;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -165,6 +172,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     padding: 10px 20px;
+    justify-content: center;
     flex-grow: 1;
 }
 
@@ -172,8 +180,8 @@ body {
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
+    flex-basis: 200px;
     flex-grow: 1;
-    flex-basis: 25%;
     text-align: center;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -192,14 +200,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 20px;
 }
 
 .popular_card {
     padding: 15px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 320px;
+    flex-grow: 1;
     background-color: #fff;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
