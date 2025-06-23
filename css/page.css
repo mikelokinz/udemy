@@ -32,6 +32,10 @@ body {
     padding: 0 10px;
 }
 
+.navbar_s1_img{
+    display: none;
+}
+
 .navbar_s2 {
     display: flex;
     gap: 10px;
@@ -63,6 +67,16 @@ body {
 }
 
 .navbar_s3_btn {
+    font-size: 16px;
+    padding: fit-content;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.navbar_s3_bars {
     font-size: 16px;
     padding: fit-content;
     color: #000000;
@@ -342,4 +356,33 @@ body {
     font-size: 15px;
     opacity: 0.85;
     line-height: 1.6;
+}
+
+@media screen and (max-width: 600px) {
+    .body {
+        font-size: 13px;
+    }
+    .navbar_s3_btn{
+        display: none;
+    }
+    .navbar_s3_learn{
+        display: none;
+    }
+    
+    .cata{
+        justify-content: center;
+    }
+
+    .navbar_s1_title{
+        display: none;
+    }
+
+    .navbar_s1_img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        
+    }
+    
+    
 }
