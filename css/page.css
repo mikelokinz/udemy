@@ -59,6 +59,7 @@ body {
     flex-wrap: wrap;
     justify-content: right;
     padding-right: 10px;
+
 }
 
 .navbar_s3_btn {
@@ -70,13 +71,37 @@ body {
     cursor: pointer;
     background-color: transparent;
 }
-.learnings{
+
+.navbar_s3_learn {
+    font-size: 16px;
+    padding: fit-content;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+}
+
+.learn_pop {
     position: absolute;
-    top: 60px;
+    top: 30px;
+    right: 0;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+    display:none;
+}
+
+.navbar_s3_learn:hover .learn_pop {
+    opacity: 100%;
+    display: block;
+    
 }
 
 /* Category Buttons */
@@ -111,6 +136,23 @@ body {
     width: 100%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.saleimg_info {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: 47%;
+    left: 10%;
+    width: 300px;
+    background-color: #bbadf8;
+    padding: 10px;
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 
@@ -246,19 +288,24 @@ body {
 /* Footer */
 .footer {
     background-color: #000;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 20px;
-    color: white;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 16px;
+    color: #fff;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer_title h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .footer_con p {
-    margin: 4px 0;
-    font-size: 14px;
+    margin: 6px 0;
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.6;
 }
