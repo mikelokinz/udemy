@@ -81,12 +81,14 @@ body {
     cursor: pointer;
     background-color: transparent;
     position: relative;
+    height: 30px;
+    
 }
 
 .learn_pop {
     position: absolute;
-    top: 30px;
-    right: 0;
+    top: 20px;
+    right: -10px;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
@@ -94,13 +96,17 @@ body {
     width: 150px;
     text-align: center;
     opacity: 0;
-    transition: all 1s ease;
-    display:none;
+    transition: all 0.5s ease-out;
+    visibility: hidden;
+    
 }
 
 .navbar_s3_learn:hover .learn_pop {
-    opacity: 100%;
-    display: block;
+    right: 0px;
+    top: 35px;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    visibility: visible;
     
 }
 
@@ -152,6 +158,34 @@ body {
     border-radius: 20px;
     color: #ffffff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    animation-name: saleimg_info;
+    animation-duration: 3s;
+    height: fit-content;
+    cursor:default;
+
+}
+
+@keyframes saleimg_info {
+    0% {
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+        width: 0px;
+        height: 79px;
+    }
+    50% {
+        text-shadow: none;
+        color: transparent;
+        opacity: 1;
+        width: 300px;
+    }
+    100% {
+        color: #ffffff;
+        width: 300px;
+        opacity: 1;
+        height: fit-content;
+   
+    }
 
 }
 
