@@ -32,7 +32,7 @@ body {
     padding: 0 10px;
 }
 
-.navbar_s1_img{
+.navbar_s1_img {
     display: none;
 }
 
@@ -86,6 +86,14 @@ body {
     background-color: transparent;
 }
 
+.navbar_s3_barscont{
+    display: none;
+}
+
+.navbar_s3_barscont{
+    display: none;
+}
+
 .navbar_s3_learn {
     font-size: 16px;
     padding: fit-content;
@@ -96,7 +104,7 @@ body {
     background-color: transparent;
     position: relative;
     height: 30px;
-    
+
 }
 
 .learn_pop {
@@ -112,7 +120,7 @@ body {
     opacity: 0;
     transition: all 0.5s ease-out;
     visibility: hidden;
-    
+
 }
 
 .navbar_s3_learn:hover .learn_pop {
@@ -121,7 +129,7 @@ body {
     opacity: 1;
     transition: all 0.5s ease-out;
     visibility: visible;
-    
+
 }
 
 /* Category Buttons */
@@ -131,10 +139,13 @@ body {
     gap: 15px;
     justify-content: space-between;
     padding: 20px;
+
 }
 
 .cata_btn {
     background-color: #9da2ff;
+    width: fit-content;
+    height: fit-content;
     color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 30px;
@@ -159,6 +170,10 @@ body {
     position: relative;
 }
 
+.saleimgphn img {
+    display: none;
+}
+
 .saleimg_info {
     position: absolute;
     text-align: center;
@@ -175,7 +190,7 @@ body {
     animation-name: saleimg_info;
     animation-duration: 3s;
     height: fit-content;
-    cursor:default;
+    cursor: default;
 
 }
 
@@ -187,18 +202,20 @@ body {
         width: 0px;
         height: 79px;
     }
+
     50% {
         text-shadow: none;
         color: transparent;
         opacity: 1;
         width: 300px;
     }
+
     100% {
         color: #ffffff;
         width: 300px;
         opacity: 1;
         height: fit-content;
-   
+
     }
 
 }
@@ -362,27 +379,66 @@ body {
     .body {
         font-size: 13px;
     }
-    .navbar_s3_btn{
+
+    .navbar_s3_btn {
         display: none;
     }
-    .navbar_s3_learn{
+
+    .navbar_s3_learn {
         display: none;
     }
-    
-    .cata{
+
+    .cata {
         justify-content: center;
     }
 
-    .navbar_s1_title{
+    .navbar_s1_title {
         display: none;
     }
 
-    .navbar_s1_img{
+    .navbar_s1_img {
         display: block;
         width: 40px;
-        height: 40px;
-        
+        height: 35px;
+
     }
+    .navbar_s2{
+        flex-basis: 5%;
+    }
+    .saleimg{
+        display: none;
+    }
+
+    .saleimgphn{
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+
+    }
+
+    .navbar_s3_bars{
+        position: relative;
+    }
+
+    .navbar_s3_barscont{
+        display: none;
+    }
+
+    .navbar_s3_bars:hover .navbar_s3_barscont{
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 1000%;
+        height: fit-content;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+
+
+    } 
+        
     
-    
+
+
 }
