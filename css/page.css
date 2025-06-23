@@ -21,23 +21,24 @@ body {
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     gap: 10px;
-    background-color: #fff;
+    background-color: #ffffffb6;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
 }
 
 .navbar_s1_title {
-    color: rgb(165, 0, 154);
+    color: rgb(137, 114, 255);
     padding: 0 10px;
 }
 
 .navbar_s2 {
     display: flex;
-    align-items: center;
     gap: 10px;
     border: 2px solid black;
     border-radius: 30px;
     padding: 10px;
     flex-grow: 1;
-    min-width: 200px;
 }
 
 .navbar_s2_input {
@@ -54,24 +55,29 @@ body {
 .navbar_s3 {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
-    flex-grow: 1;
+    justify-content: right;
+    padding-right: 10px;
 }
 
 .navbar_s3_btn {
     font-size: 16px;
-    padding: 6px 12px;
+    padding: fit-content;
     color: #000000;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    background-color: transparent;
 }
-
-.navbar_s3_btn:hover {
-    background-color: #b833b3;
+.learnings{
+    position: absolute;
+    top: 60px;
+    right;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 /* Category Buttons */
@@ -79,24 +85,24 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
 }
 
 .cata_btn {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
+    background-color: #9da2ff;
+    color: rgb(255, 255, 255);
+    padding: 10px;
     border-radius: 30px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .cata_btn:hover {
-    background-color: #000000;
+    background-color: #cfc5fa;
     transform: scale(1.05);
     color: white;
 }
@@ -105,17 +111,17 @@ body {
 .saleimg img {
     width: 100%;
     border-radius: 20px;
-    margin-top: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Recommended Section */
 .reco_title {
-    padding: 20px;
+    padding: 10px;
 }
 
 .reco_con {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -123,30 +129,22 @@ body {
 }
 
 .reco_card {
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     width: 100%;
     max-width: 320px;
     flex-grow: 1;
     background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .reco_card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Image inside card */
-.img {
-    width: 100%;
-    border-radius: 10px;
-    height: auto;
-    margin-bottom: 10px;
-}
 
-/* Hidden info fades in */
 .reco_card_info {
     opacity: 0;
     visibility: hidden;
@@ -162,6 +160,17 @@ body {
     max-height: 200px;
 }
 
+/* Image inside card */
+.img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Hidden info fades in */
+
+
 /* Topics */
 .topic_head {
     padding: 20px;
@@ -174,21 +183,24 @@ body {
     padding: 10px 20px;
     justify-content: center;
     flex-grow: 1;
+
 }
 
 .topic_con p {
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
-    flex-basis: 200px;
+    flex-basis: 25%;
     flex-grow: 1;
     text-align: center;
     transition: all 0.2s ease;
     cursor: pointer;
+
 }
 
 .topic_con p:hover {
-    background-color: #efefef;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Popular Section */
@@ -210,14 +222,26 @@ body {
     width: 100%;
     max-width: 320px;
     flex-grow: 1;
-    background-color: #fff;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.popular_card:hover {
+.popular_card_info {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+}
+
+
+.popular_card:hover .popular_card_info {
     transform: translateY(-6px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px;
 }
 
 /* Footer */
